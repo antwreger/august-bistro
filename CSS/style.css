@@ -8,7 +8,7 @@ body {
 }
 
 /* ===== HEADER SECTION ===== */
-.header {
+header {
     display: flex;
     align-items: baseline;
     gap: 20px;
