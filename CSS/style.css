@@ -28,21 +28,6 @@ nav a {
 }
 
 /* ===== HERO SECTION ===== */
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.btn {
-    padding: 12px 24px;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
 
 .hero {
     position: relative;
@@ -71,4 +56,5 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 400px;
 }
