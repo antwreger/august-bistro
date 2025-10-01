@@ -1,0 +1,74 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    background-color: black;
+    color: white; 
+    font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER SECTION ===== */
+.header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ===== NAVIGATION ===== */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.hero {
+    position: relative;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
