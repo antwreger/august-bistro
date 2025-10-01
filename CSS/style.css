@@ -1,5 +1,7 @@
 /* ===== GLOBAL STYLES ===== */
 body {
+    margin: 0;
+    padding: 0;
     background-color: black;
     color: white; 
     font-family: Arial, sans-serif;
@@ -28,11 +30,11 @@ nav a {
 }
 
 /* ===== HERO SECTION ===== */
-
-.hero {
+.hero-section {
     position: relative;
 }
-.hero img {
+
+.hero-section img {
     width: 100%;
     height: auto;
     display: block;
@@ -47,7 +49,7 @@ nav a {
     margin-top: 20px;
     display: inline-block;
 }
-.hero-text {
+.hero-content {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 30px;
     border-radius: 10px;
@@ -57,4 +59,35 @@ nav a {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 400px;
+}
+
+/* ===== MENU SECTION ===== */
+.menu-section {
+    position: relative;
+}
+
+.menu-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.menu-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.menu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
