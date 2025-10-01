@@ -80,7 +80,6 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     width: 500px;
     max-height: 80vh;
     overflow-y: auto;
@@ -90,4 +89,24 @@ nav a {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+/* Menu item styling */
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.menu-description {
+    display: block;
+    font-size: 0.9em;
+    color: #ccc;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.menu-category {
+    color: #fff;
+    margin: 20px 0 10px 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
 }
