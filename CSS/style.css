@@ -12,7 +12,8 @@ body {
     padding: 0;
     background-color: black;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    scroll-padding-top: 100px;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -146,6 +147,15 @@ nav a:hover {
     font-size: 1.8rem;
     margin-bottom: 30px;
     font-weight: normal;
+    position: relative;
+}
+
+#menu-title::before {
+    content: '';
+    display: block;
+    height: 80px;
+    margin-top: -80px;
+    visibility: hidden;
 }
 
 .menu-category {
