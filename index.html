@@ -3,29 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>August Bistro</title>
+    <meta name="description" content="August Bistro - Upplev svensk gastronomi med modern twist. Boka bord för en minnesvärd middag.">
+    <title>August Bistro - Svensk Gastronomi</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
     <header> 
-        <h1>August Bistro</h1>
-        <h2>Bistro & Co 2022</h2>
         <nav>
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="om-oss.html">Om Oss</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="meny.html">Meny</a></li>
+                <li><a href="#spritprovning">Spritprovning</a></li>
+                <li><a href="#booking">Boka bord</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero-section">
-            <img src="images/august.avif" alt="august strindberg framför whiskey">
-            <div class="hero-content">
-                <h3>Välkommen till August Bistro</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel delectus repudiandae excepturi vitae iure, labore obcaecati architecto soluta dignissimos, repellat enim a. Dicta aperiam vel officia explicabo sequi beatae fugit?</p>
-                <a href="meny.html" class="btn">Se vår meny</a>
-            </div>
-        </section>
+        <img src="images/august.avif" alt="August Strindberg framför whiskey - atmosfärisk bistrobild">
+        <div class="hero-content">
+            <img src="images/august-logo.png" alt="August Bistro Logo" class="hero-logo">
+            <h1 id="rotating-title">Välkommen till August Bistro</h1>
+            <p id="rotating-description">En plats där smak möter tradition</p>
+            <a href="meny.html" class="btn">Se vår meny</a>
+        </div>
     </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>Om August Bistro</h2>
+            <p>
+                Sedan 2022 har August Bistro varit en mötesplats för god mat och gemenskap. 
+                Vi serverar klassisk svensk husmanskost med en modern twist, tillagad med 
+                kärlek och respekt för lokala råvaror.
+            </p>
+            <p>
+                Vårt kök leds av erfarna kockar som strävar efter att skapa en minnesvärd 
+                upplevelse för varje gäst. Välkommen att upptäcka smakerna från det svenska 
+                köket i en varm och inbjudande atmosfär.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING SECTION ===== -->
+    <section class="booking-section" id="booking">
+        <div class="booking-content">
+            <h2>Boka bord</h2>
+            <p>Reservera ditt bord för en minnesvärd middag</p>
+            
+            <form class="booking-form" id="booking-form">
+                <!-- Name field -->
+                <div class="form-group">
+                    <label for="booking-name">Namn:</label>
+                    <input type="text" id="booking-name" name="name" required>
+                </div>
+                
+                <!-- Email field -->
+                <div class="form-group">
+                    <label for="booking-email">E-post:</label>
+                    <input type="email" id="booking-email" name="email" required>
+                </div>
+                
+                <!-- Date, Time, Guests row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-date">Datum:</label>
+                        <input type="date" id="booking-date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="booking-time">Tid:</label>
+                        <select id="booking-time" name="time" required>
+                            <option value="">Välj tid</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="booking-guests">Personer:</label>
+                        <select id="booking-guests" name="guests" required>
+                            <option value="">Antal</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="booking-btn">Boka bord</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2022 August Bistro. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="script.js"></script>
 </body>
 </html>

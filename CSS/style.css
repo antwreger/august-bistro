@@ -1,32 +1,45 @@
+/* ===============================================
+   AUGUST BISTRO - MAIN STYLESHEET
+   =============================================== */
+
 /* ===== GLOBAL STYLES ===== */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: black;
-    color: white; 
+    color: white;
     font-family: Arial, sans-serif;
 }
 
-/* ===== HEADER SECTION ===== */
+/* ===== HEADER & NAVIGATION ===== */
 header {
     display: flex;
-    align-items: baseline;
-    gap: 20px;
     justify-content: center;
+    margin: 0 20px;
 }
 
-/* ===== NAVIGATION ===== */
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 15px 0;
+    justify-content: center;
+    gap: 10px;
 }
 
 nav a {
     padding: 10px 15px;
     text-decoration: none;
     color: white;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
 }
 
 /* ===== HERO SECTION ===== */
@@ -40,18 +53,8 @@ nav a {
     display: block;
 }
 
-.btn {
-    padding: 12px 24px;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
     border-radius: 10px;
     position: absolute;
@@ -60,6 +63,53 @@ nav a {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 400px;
+    color: black;
+}
+
+.hero-logo {
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.btn {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.about-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-content h3 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 /* ===== MENU SECTION ===== */
@@ -92,7 +142,6 @@ nav a {
     margin: 0;
 }
 
-/* Menu item styling */
 .menu-item {
     margin-bottom: 20px;
 }
@@ -110,4 +159,122 @@ nav a {
     margin: 20px 0 10px 0;
     border-bottom: 1px solid #555;
     padding-bottom: 10px;
+}
+
+/* ===== BOOKING SECTION ===== */
+.booking-section {
+    padding: 20px 20px 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.booking-content {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.booking-content h3 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.booking-content p {
+    margin-bottom: 30px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* ===== BOOKING FORM ===== */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group select option {
+    background-color: #333;
+    color: white;
+}
+
+.booking-btn {
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.booking-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    text-align: center;
+    padding: 20px;
+    font-size: small;
 }
