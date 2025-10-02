@@ -17,9 +17,15 @@ body {
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
     display: flex;
     justify-content: center;
-    margin: 0 20px;
+    margin: 0;
+    padding: 0 20px;
 }
 
 nav ul {
@@ -45,6 +51,7 @@ nav a:hover {
 /* ===== HERO SECTION ===== */
 .hero-section {
     position: relative;
+    margin-top: 40px;
 }
 
 .hero-section img {
@@ -101,7 +108,7 @@ nav a:hover {
 }
 
 .about-content {
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
 }
 
@@ -117,12 +124,19 @@ nav a:hover {
 
 /* ===== MENU SECTION ===== */
 .menu-section {
-    background-color: black;
-    color: white;
-    padding: 80px 20px;
+    padding: 0;
+}
+
+.menu-section img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .menu-content {
+    background-color: black;
+    color: white;
+    padding: 40px 20px 80px 20px;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -130,7 +144,7 @@ nav a:hover {
 
 .menu-content h2 {
     font-size: 1.8rem;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-weight: normal;
 }
 
