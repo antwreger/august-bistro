@@ -143,7 +143,7 @@ nav a:hover {
 }
 
 .menu-item {
-    margin-bottom: 20px;
+    margin-bottom: 20px;;
 }
 
 .menu-description {
@@ -159,6 +159,7 @@ nav a:hover {
     margin: 20px 0 10px 0;
     border-bottom: 1px solid #555;
     padding-bottom: 10px;
+    font-size: medium;
 }
 
 /* ===== BOOKING SECTION ===== */
