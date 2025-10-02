@@ -142,7 +142,7 @@ nav a:hover {
 .menu-content {
     background-color: black;
     color: white;
-    padding: 40px 20px 80px 20px;
+    padding: 80px 20px;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -206,11 +206,10 @@ nav a:hover {
 
 /* ===== BOOKING SECTION ===== */
 .booking-section {
-    padding: 20px 20px 80px 20px;
+    padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
 }
 
 .booking-content {
