@@ -15,14 +15,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#top {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 /* ===== HEADER & NAVIGATION ===== */
-header {
+header{
     position: fixed;
     top: 0;
     width: 100%;
