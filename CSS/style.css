@@ -110,7 +110,7 @@ nav a:hover {
 }
 
 /* ===== ABOUT SECTION ===== */
-.about-section {
+.about-section, .sprit-section {
     display: flex;
     justify-content: center;
     align-items: center;
