@@ -3,6 +3,10 @@
    =============================================== */
 
 /* ===== GLOBAL STYLES ===== */
+* {
+    font-family: 'Playfair Display', 'Lato', serif;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -12,7 +16,12 @@ body {
     padding: 0;
     background-color: black;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
