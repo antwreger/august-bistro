@@ -34,7 +34,8 @@ header{
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0;  
+    padding: 0;
+    letter-spacing: 0.8px;
 }
 
 nav ul {
@@ -84,6 +85,10 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid #666;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px); /* Safari/iOS support */
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.35);
 }
 
 .hero-logo {
@@ -312,6 +317,7 @@ nav a:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
+
 
 /* ===== FOOTER ===== */
 footer {

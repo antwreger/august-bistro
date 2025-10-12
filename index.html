@@ -6,6 +6,7 @@
     <meta name="description" content="August Bistro - Upplev svensk gastronomi med modern twist. Boka bord för en minnesvärd middag.">
     <title>August Bistro - Svensk Gastronomi</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,62 +60,76 @@
         </div>
     </section>
 
-    <!-- ===== MENU SECTION ===== -->
-    <section class="menu-section" id="meny">
-        <img src="images/august.avif" alt="august byst framför flaskor">
-        <div class="menu-content">
-            <h2 id="menu-title">August Meny</h2>
-            <div class="menu-category">
-                <h3>Förrätter</h3>
-                <ul>
-                    <li class="menu-item">
-                        <div class="item-name">Rödbetscarpaccio</div>
-                        <p class="item-description">En fräsch och färgglad rätt med rödbetor, getost och valnötter.</p>
-                    </li>
-                    <li class="menu-item">
-                        <div class="item-name">Grillad lax</div>
-                        <p class="item-description">Serveras med citron- och dillsås samt färska grönsaker.</p>
-                    </li>
-                    <li class="menu-item">
-                        <div class="item-name">Räkcocktail</div>
-                        <p class="item-description">Klassisk förrätt med räkor, avokado och en krämig dressing.</p>
-                    </li>
-                </ul>
-            </div>
+<!-- ===== MENU SECTION ===== -->
+<section class="menu-section" id="meny">
+  <img src="images/august.avif" alt="august byst framför flaskor" loading="lazy">
+  <div class="menu-content">
+    <h2 id="menu-title">Meny</h2>
 
-            <div class="menu-category">
-                <h3>Varmrätter</h3>
-                <ul>
-                    <li class="menu-item">
-                        <div class="item-name">Oxfilé</div>
-                        <p class="item-description">Serveras med rödvinssås, potatisgratäng och säsongens grönsaker.</p>
-                    </li>
-                    <li class="menu-item">
-                        <div class="item-name">Röding</div>
-                        <p class="item-description">Stekt röding med dillpotatis och vitvinssås.</p>
-                    </li>
-                    <li class="menu-item">
-                        <div class="item-name">Vegetarisk pasta</div>
-                        <p class="item-description">Hemgjord pasta med säsongens grönsaker och parmesan.</p>
-                    </li>
-                </ul>
-            </div>
+    <!-- LOADING MESSAGE (shown instantly, removed when done) -->
+    <div id="menu-loading">Laddar meny…</div>
 
-            <div class="menu-category">
-                <h3>Desserter</h3>
-                <ul>
-                    <li class="menu-item">
-                        <div class="item-name">Chokladfondant</div>
-                        <p class="item-description">Varm chokladkaka med vaniljglass och färska bär.</p>
-                    </li>
-                    <li class="menu-item">
-                        <div class="item-name">Crème brûlée</div>
-                        <p class="item-description">Klassisk fransk dessert med karamelliserat socker.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <!-- DYNAMIC MENU (fetched from Google Doc) -->
+    <div id="dynamic-menu" hidden></div>
+
+    <!-- STATIC FALLBACK MENU (only shown if fetch fails) -->
+    <div id="static-menu" hidden>
+      <div class="menu-category">
+        <h3>Förrätter</h3>
+        <ul>
+          <li class="menu-item">
+            <div class="item-name">Rödbetscarpaccio</div>
+            <p class="item-description">En fräsch och färgglad rätt med rödbetor, getost och valnötter.</p>
+          </li>
+          <li class="menu-item">
+            <div class="item-name">Grillad lax</div>
+            <p class="item-description">Serveras med citron- och dillsås samt färska grönsaker.</p>
+          </li>
+          <li class="menu-item">
+            <div class="item-name">Räkcocktail</div>
+            <p class="item-description">Klassisk förrätt med räkor, avokado och en krämig dressing.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h3>Varmrätter</h3>
+        <ul>
+          <li class="menu-item">
+            <div class="item-name">Oxfilé</div>
+            <p class="item-description">Serveras med rödvinssås, potatisgratäng och säsongens grönsaker.</p>
+          </li>
+          <li class="menu-item">
+            <div class="item-name">Röding</div>
+            <p class="item-description">Stekt röding med dillpotatis och vitvinssås.</p>
+          </li>
+          <li class="menu-item">
+            <div class="item-name">Vegetarisk pasta</div>
+            <p class="item-description">Hemgjord pasta med säsongens grönsaker och parmesan.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h3>Desserter</h3>
+        <ul>
+          <li class="menu-item">
+            <div class="item-name">Chokladfondant</div>
+            <p class="item-description">Varm chokladkaka med vaniljglass och färska bär.</p>
+          </li>
+          <li class="menu-item">
+            <div class="item-name">Crème brûlée</div>
+            <p class="item-description">Klassisk fransk dessert med karamelliserat socker.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to menu parser script -->
+  <script src="./helpers/menu.js" defer></script>
+</section>
+
     <section class="sprit-section" id="spritprovning">
         <div class="sprit-content">
             <h2>Spritprovning</h2>
