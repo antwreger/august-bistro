@@ -4,7 +4,7 @@
 
 /* ===== GLOBAL STYLES ===== */
 * {
-    font-family: 'Lato', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 html {
@@ -19,9 +19,12 @@ body {
 }
 
 /* ===== HEADINGS ===== */
-h1, h2, h3, h4, h5, h6, nav a{
-    font-family: 'Playfair Display', serif;
+h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -132,9 +135,26 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* ===== SPRITPROVNING SECTION ===== */
+.sprit-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.sprit-content h2 {
+    margin-bottom: 30px;
+}
+
+.sprit-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
 /* ===== MENU SECTION ===== */
 .menu-section {
     padding: 0;
+    scroll-margin-top: 60px;
 }
 
 .menu-section img {
@@ -153,7 +173,6 @@ nav a:hover {
 }
 
 .menu-content h2 {
-    font-size: 1.8rem;
     margin-bottom: 30px;
     font-weight: normal;
     position: relative;
@@ -326,7 +345,6 @@ nav a:hover {
 
 .findus-content h2 {
     margin-bottom: 40px;
-    font-size: 2.5rem;
 }
 
 .contact-info {
