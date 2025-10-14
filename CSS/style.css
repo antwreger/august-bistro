@@ -208,7 +208,8 @@ nav a:hover {
 .about-content {
     max-width: 800px;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
 }
 
 .about-content h2 {
@@ -271,7 +272,7 @@ nav a:hover {
 /* yes we need to scale the images properly in real production lol */
 
 .booking-section {
-    padding: 80px 20px;
+  margin-top: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -373,6 +374,20 @@ nav a:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
+
+/* SVG chevron so we can style it however we want ^^ */
+.form-group select {
+  appearance: none; /* hide default chevron */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='12' viewBox='0 0 20 20' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M5.516 7.548l4.484 4.484 4.484-4.484a.75.75 0 011.06 1.06l-5.014 5.015a.75.75 0 01-1.06 0L4.456 8.608a.75.75 0 011.06-1.06z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center; /* 👈 this controls the chevron offset */
+  background-size: 12px;
+  padding-right: 40px; /* 👈 extra padding so text doesn’t overlap arrow */
+}
+
 
 /* ===== FINDUS SECTION ===== */
 .findus-section {
