@@ -90,6 +90,42 @@ nav a:hover {
 }
 
 /* ===== HERO SECTION ===== */
+
+/* carousel magic */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* base style for each slide */
+.hero-bg > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1);
+  transition:
+    opacity 1200ms ease,     
+    transform 10s ease-out;  
+  will-change: opacity, transform;
+}
+
+/* the active slide */
+.hero-bg > img.is-active {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* disable transitions for the first paint */
+.hero-bg.no-animate > img {
+  transition: none !important;
+}
+
+/* normal hero stuff */
 .hero-section {
     position: relative;
     margin-top: 40px;
@@ -211,6 +247,16 @@ nav a:hover {
 }
 
 /* ===== BOOKING SECTION ===== */
+.booking-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center -1520px; /* shift the image down 1520px */
+  opacity: 0.65;
+}
+
+/* yes we need to scale the images properly in real production lol */
+
 .booking-section {
     padding: 80px 20px;
     display: flex;
