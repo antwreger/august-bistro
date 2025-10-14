@@ -13,6 +13,13 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+
+
+  <!-- helpers -->
+  <script src="./helpers/menu.js" defer></script>
+  <script src="./helpers/fadeOnScroll.js" defer></script>
+  <script src="./helpers/fadeOnHeader.js" defer></script>
+
 </head>
 
 <body>
@@ -22,7 +29,7 @@
             <ul>
                 <li><a href="#top">Start</a></li>
                 <li><a href="#about">Om Oss</a></li>
-                <li><a href="#menu">Meny</a></li>
+                <li><a href="#meny">Meny</a></li>
                 <li><a href="#spritprovning">Spritprovning</a></li>
                 <li><a href="#booking">Boka bord</a></li>
                 <li><a href="#findus">Hitta Oss</a></li>
@@ -32,19 +39,18 @@
 
     <!-- ===== HERO SECTION ===== -->
     <section class="hero-section" id="top">
-        <img src="images/august-hero.avif" alt="Atmosfärisk bild från August Bistro">
-        <div class="hero-content">
-            <h1>
-                <img src="images/august-logo.png" alt="August Bistro - Välkommen till August Bistro" class="hero-logo">
-            </h1>
+        <div class="hero-content fade-on-scroll">
+            <img src="images/august-logo.png" alt="August Bistro - Välkommen till August Bistro" class="hero-logo">
             <p id="rotating-description">En plats där smak möter tradition</p>
-            <a href="#menu" class="btn">Se vår meny</a>
+            <a href="#meny" class="btn">Se vår meny</a>
         </div>
+
+        
     </section>
 
     <!-- ===== ABOUT SECTION ===== -->
     <section class="about-section" id="about">
-        <div class="about-content">
+        <div class="about-content fade-near-header-text">
             <h2>Om August Bistro</h2>
             <p>
                 Sedan 2022 har August Bistro varit en mötesplats för god mat och gemenskap. 
@@ -61,8 +67,8 @@
     </section>
 
 <!-- ===== MENU SECTION ===== -->
-<section class="menu-section" id="meny">
-  <img src="images/august.avif" alt="august byst framför flaskor" loading="lazy">
+<img src="images/august.avif" alt="august byst framför flaskor" loading="lazy" class="menu-img">
+<section class="menu-section fade-near-header-text" id="meny">
   <div class="menu-content">
     <h2 id="menu-title">Meny</h2>
 
@@ -126,12 +132,10 @@
     </div>
   </div>
 
-  <!-- Link to menu parser script -->
-  <script src="./helpers/menu.js" defer></script>
 </section>
 
     <section class="sprit-section" id="spritprovning">
-        <div class="sprit-content">
+        <div class="sprit-content fade-near-header-text">
             <h2>Spritprovning</h2>
             <p>
                 Hos August Bistro kan vi erbjuda ett stort urval av whiskey, rom och andra 
@@ -142,13 +146,12 @@
                 Boka en spritprovning för ditt sällskap och låt våra kunniga bartenders 
                 guida er genom en resa av smaker och berättelser bakom varje flaska.
             </p>
-            <a href="#booking" class="btn">Boka spritprovning</a>
         </div>
     </section>
    
     <!-- ===== BOOKING SECTION ===== -->
     <section class="booking-section" id="booking">
-        <div class="booking-content">
+        <div class="booking-content fade-near-header-text">
             <h2>Boka bord</h2>
             <p>Reservera ditt bord för en minnesvärd middag</p>
             
@@ -228,7 +231,5 @@
         <p>&copy; 2025 August Bistro. Alla rättigheter förbehållna.</p>
     </footer>
 
-    <!-- ===== SCRIPTS ===== -->
-    <script src="script.js"></script>
 </body>
 </html>
