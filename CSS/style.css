@@ -265,8 +265,9 @@ nav a:hover {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center -1520px; /* shift the image down 1520px */
+  object-position: center 75%;
   opacity: 0.65;
+  padding-top: 4.5rem;
 }
 
 /* yes we need to scale the images properly in real production lol */
@@ -375,6 +376,13 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
+.booking-hero {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+
 /* SVG chevron so we can style it however we want ^^ */
 .form-group select {
   appearance: none; /* hide default chevron */
@@ -388,6 +396,32 @@ nav a:hover {
   padding-right: 40px; /* 👈 extra padding so text doesn’t overlap arrow */
 }
 
+/* and one for the date as well */
+/* Add space so text doesn't overlap the icon */
+.form-group input[type="date"] {
+  padding-right: 44px;
+}
+
+/* Replace the calendar icon (Chrome / Safari / Edge) */
+.form-group input[type="date"] {
+  padding-right: 44px;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1zm-2 8v10h14V10H5zm14-2V6H5v2h14z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center; /* tweak spacing */
+  background-size: 18px 18px;
+  opacity: 1;
+  color: transparent;   /* hide default icon */
+  cursor: pointer;
+}
+
+/* Optional cleanup */
+.form-group input[type="date"]::-webkit-inner-spin-button,
+.form-group input[type="date"]::-webkit-clear-button {
+  display: none;
+}
 
 /* ===== FINDUS SECTION ===== */
 .findus-section {
@@ -401,7 +435,7 @@ nav a:hover {
 }
 
 .findus-content h2 {
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 
 .contact-info {
