@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
       'images/carousel/5.jpg',
       'images/carousel/6.jpg',
       'images/carousel/7.jpg',
+      'images/carousel/8.jpg',
+      'images/carousel/9.jpg',
+      'images/carousel/11.jpg',
     ],
     interval: 6000
   });
