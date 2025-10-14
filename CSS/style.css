@@ -66,11 +66,14 @@ nav a:hover {
 .hero-section {
     position: relative;
     margin-top: 40px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .hero-section img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 

@@ -21,8 +21,8 @@
         <nav>
             <ul>
                 <li><a href="#top">Start</a></li>
+                <li><a href="#meny">Meny</a></li>
                 <li><a href="#about">Om Oss</a></li>
-                <li><a href="#menu">Meny</a></li>
                 <li><a href="#spritprovning">Spritprovning</a></li>
                 <li><a href="#booking">Boka bord</a></li>
                 <li><a href="#findus">Hitta Oss</a></li>
@@ -32,37 +32,18 @@
 
     <!-- ===== HERO SECTION ===== -->
     <section class="hero-section" id="top">
-        <img src="images/august-hero.avif" alt="Atmosfärisk bild från August Bistro">
+        <img src="images/august-hero.avif" alt="Atmosfärisk bild från August Bistro" class="hero-image">
         <div class="hero-content">
             <h1>
                 <img src="images/august-logo.png" alt="August Bistro - Välkommen till August Bistro" class="hero-logo">
             </h1>
             <p id="rotating-description">En plats där smak möter tradition</p>
-            <a href="#menu" class="btn">Se vår meny</a>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="about-section" id="about">
-        <div class="about-content">
-            <h2>Om August Bistro</h2>
-            <p>
-                Sedan 2022 har August Bistro varit en mötesplats för god mat och gemenskap. 
-                Vi serverar klassisk svensk husmanskost med en modern twist, tillagad med 
-                kärlek och respekt för lokala råvaror.
-            </p>
-            <p>
-                Vårt kök leds av erfarna kockar som strävar efter att skapa en minnesvärd 
-                upplevelse för varje gäst. Välkommen att upptäcka smakerna från det svenska 
-                köket i en varm och inbjudande atmosfär.
-            </p>
-            <a href="#booking" class="btn">Boka bord</a>
+            <a href="#meny" class="btn">Se vår meny</a>
         </div>
     </section>
 
 <!-- ===== MENU SECTION ===== -->
 <section class="menu-section" id="meny">
-  <img src="images/august.avif" alt="august byst framför flaskor" loading="lazy">
   <div class="menu-content">
     <h2 id="menu-title">Meny</h2>
 
@@ -124,11 +105,31 @@
         </ul>
       </div>
     </div>
+    
+    <!-- Booking button right after the menu -->
+    <a href="#booking" class="btn">Boka bord</a>
   </div>
 
   <!-- Link to menu parser script -->
   <script src="./helpers/menu.js" defer></script>
 </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>Om August Bistro</h2>
+            <p>
+                Sedan 2022 har August Bistro varit en mötesplats för god mat och gemenskap. 
+                Vi serverar klassisk svensk husmanskost med en modern twist, tillagad med 
+                kärlek och respekt för lokala råvaror.
+            </p>
+            <p>
+                Vårt kök leds av erfarna kockar som strävar efter att skapa en minnesvärd 
+                upplevelse för varje gäst. Välkommen att upptäcka smakerna från det svenska 
+                köket i en varm och inbjudande atmosfär.
+            </p>
+        </div>
+    </section>
 
     <section class="sprit-section" id="spritprovning">
         <div class="sprit-content">
