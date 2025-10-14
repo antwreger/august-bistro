@@ -33,7 +33,7 @@
                 <li><a href="#meny">Meny</a></li>
                 <li><a href="#about">Om Oss</a></li>
                 <li><a href="#spritprovning">Spritprovning</a></li>
-                <li><a href="#booking">Boka bord</a></li>
+                <li><a href="#booking">Boka en upplevelse</a></li>
                 <li><a href="#findus">Hitta Oss</a></li>
             </ul>
         </nav>
@@ -114,8 +114,7 @@
       </div>
     </div>
     
-    <!-- Booking button right after the menu -->
-    <a href="#booking" class="btn">Boka bord</a>
+    <a href="#booking" class="btn">Boka en upplevelse</a>
   </div>
 
   <!-- Link to menu parser script -->
@@ -156,58 +155,72 @@
     </section>
 
     <!-- ===== BOOKING SECTION ===== -->
-    <section class="booking-section" id="booking">
-        <div class="booking-content fade-near-header-text">
-            <h2>Boka bord</h2>
-            <p>Reservera ditt bord för en minnesvärd middag</p>
-            
-            <form class="booking-form" id="booking-form">
-                <!-- Name field -->
-                <div class="form-group">
-                    <label for="booking-name">Namn:</label>
-                    <input type="text" id="booking-name" name="name" required>
-                </div>
-                
-                <!-- Email field -->
-                <div class="form-group">
-                    <label for="booking-email">E-post:</label>
-                    <input type="email" id="booking-email" name="email" required>
-                </div>
-                
-                <!-- Date, Time, Guests row -->
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="booking-date">Datum:</label>
-                        <input type="date" id="booking-date" name="date" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="booking-time">Tid:</label>
-                        <select id="booking-time" name="time" required>
-                            <option value="">Välj tid</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                            <option value="19:00">19:00</option>
-                            <option value="20:00">20:00</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="booking-guests">Personer:</label>
-                        <select id="booking-guests" name="guests" required>
-                            <option value="">Antal</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="4">4</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <button type="submit" class="booking-btn">Boka bord</button>
-            </form>
+   <section class="booking-section" id="booking">
+  <div class="booking-content fade-near-header-text">
+    <h2>Boka en upplevelse</h2>
+    <p>Reservera ett bord eller boka spritprovning.</p>
+
+    <form class="booking-form" id="booking-form" method="POST" action="https://api.web3forms.com/submit">
+      <!-- Web3Forms basics -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+      <input type="hidden" id="booking-subject" name="subject" value="Bokningsförfrågan – Middag" />
+
+      <!-- Typ av bokning -->
+      <div class="form-group">
+        <label for="booking-type">Vad vill du boka?</label>
+        <select id="booking-type" name="booking_type" required>
+          <option value="middag" selected>Middag (Boka bord)</option>
+          <option value="sprit-whiskey">Spritprovning – Whiskey</option>
+          <option value="sprit-rom">Spritprovning – Rom</option>
+        </select>
+      </div>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="booking-name">Namn:</label>
+        <input type="text" id="booking-name" name="name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="booking-email">E-post:</label>
+        <input type="email" id="booking-email" name="email" required>
+      </div>
+
+      <!-- Date, Time, Guests -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="booking-date">Datum:</label>
+          <input type="date" id="booking-date" name="date" required>
         </div>
-    </section>
+
+        <div class="form-group">
+          <label for="booking-time">Tid:</label>
+          <select id="booking-time" name="time" required>
+            <option value="">Välj tid</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-guests">Personer:</label>
+          <select id="booking-guests" name="guests" required>
+            <option value="">Antal</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="booking-btn">Boka</button>
+    </form>
+  </div>
+</section>
     <img src="images/table.jpg" alt="Råbiff med picklad rödbeta, kapris, cornichons, parmesan, dijonnaise" loading="lazy" class="booking-img">
 
     <!-- ===== HITTA OSS SECTION ===== -->
@@ -217,16 +230,16 @@
             <div class="contact-info">
                 <div class="address">
                     <h3>Adress</h3>
-                    <p>Kungsgatan 12<br>442 30 Kungälv</p>
+                    <p>Västra Gatan 62<br>442 31 Kungälv</p>
                 </div>
                 <div class="contact">
                     <h3>Kontakt</h3>
-                    <p>Telefon: 0303-123 456<br>E-post: info@augustbistro.se</p>
+                    <p>Telefon: 0706-730 442<br>E-post: info@augustbistro.se</p>
                 </div>
                 <div class="hours">
                     <h3>Öppettider</h3>
-                    <p>Tisdag - Torsdag: 17:00 - 22:00<br>
-                       Fredag - Lördag: 17:00 - 23:00<br>
+                    <p>Tisdag - Torsdag: 16:00 - 22:00<br>
+                       Fredag - Lördag: 16:00 - 23:00<br>
                        Söndag - Måndag: Stängt</p>
                 </div>
             </div>
