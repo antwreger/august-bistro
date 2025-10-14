@@ -16,19 +16,18 @@ function initHeroBgCarousel({
     return img;
   });
 
-  // CSS guard: disable transitions until first paint
+    // CSS guard: disable transitions until first paint
   root.classList.add('no-animate');
 
   let idx = 0;
 
-  // Ensure the first slide is decoded, then show it without transition
+  // Ensure the first slide is decoded, then show it
   const first = els[0];
-  (first.decode?.() ?? Promise.resolve()).finally(() => {
-    first.classList.add('is-active');      // visible immediately
-    requestAnimationFrame(() => {
-      root.classList.remove('no-animate'); // enable transitions for subsequent fades
-    });
-  });
+
+(first.decode?.() ?? Promise.resolve()).finally(() => {
+  first.classList.add('is-visible', 'is-zooming'); // show + start zoom
+  requestAnimationFrame(() => root.classList.remove('no-animate'));
+});
 
   async function crossfadeTo(nextIdx) {
     if (nextIdx === idx) return;
@@ -38,15 +37,30 @@ function initHeroBgCarousel({
     // Make sure the next image is decoded before we show it
     try { await (next.decode?.() ?? Promise.resolve()); } catch {}
 
-    // Overlap ON: show next first…
-    next.classList.add('is-active');
+    // Overlap(show + start zoom)
+    next.classList.add('is-visible', 'is-zooming');
 
-    // …then, in the next frame, hide previous.
+    // next frame: fade out prev, keep its zoom (do not touch .is-zooming yet)
     requestAnimationFrame(() => {
-      prev.classList.remove('is-active');
+      prev.classList.remove('is-visible');  // fades to 0, continues zooming
+
+      // after opacity transition ends, stop zoom + reset (invisible)
+      const onEnd = (e) => {
+        if (e.propertyName !== 'opacity') return;
+        prev.removeEventListener('transitionend', onEnd);
+
+        const saved = prev.style.transition;
+        prev.style.transition = 'none';
+        prev.classList.remove('is-zooming');
+        prev.style.transform = 'scale(1)';
+        prev.offsetHeight;                     // reflow
+        prev.style.transition = saved || '';
+      };
+      prev.addEventListener('transitionend', onEnd);
+
       idx = nextIdx;
     });
-  }
+}
 
   function start() {
     stop();
@@ -65,6 +79,7 @@ function initHeroBgCarousel({
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroBgCarousel({
+    container: '#hero-bg',
     images: [
       'images/carousel/2.png',
       'images/carousel/3.jpg',

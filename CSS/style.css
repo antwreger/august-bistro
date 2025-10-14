@@ -111,35 +111,40 @@ nav a:hover {
 
 /* image stack below overlay */
 .hero-bg > img {
-  position: absolute;
+  position: absolute; 
   inset: 0;
-  width: 100%;
+  width: 100%; 
   height: 100%;
   object-fit: cover;
   opacity: 0;
   transform: scale(1);
-  transition:
-    opacity 1200ms ease,
-    transform 10s ease-out;
+  transition: opacity 1600ms ease;
   will-change: opacity, transform;
-  z-index: 0;
 }
 
-/* the active slide */
-.hero-bg > img.is-active {
+.hero-bg > img.is-visible,
+.hero-bg > img.is-active {   /* backwards-compat */
   opacity: 1;
-  transform: scale(1.08);
+}
+
+.hero-bg > img.is-zooming {
+  animation: heroZoom 12s ease-out forwards;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
 }
 
 /* disable transitions for the first paint */
 .hero-bg.no-animate > img {
   transition: none !important;
+  animation: none !important;
 }
 
 /* normal hero stuff */
 .hero-section {
     position: relative;
-    margin-top: 40px;
     height: 100vh;
 }
 
