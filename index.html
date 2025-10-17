@@ -21,13 +21,15 @@
   <script src="./helpers/fadeOnHeader.js" defer></script>
   <script src="./helpers/scrollToMiddle.js" defer></script>
   <script src="./helpers/carousel.js" defer></script>
+  <script src="./helpers/mobileNav.js" defer></script>
 
 </head>
 
 <body>
      <!-- ===== HEADER & NAVIGATION ===== -->
-    <header>
-  <nav>
+  <header>
+  <!-- ▼ add id for targeting -->
+  <nav id="primary-nav">
     <ul>
       <li><a href="#top">Start</a></li>
       <li><a href="#meny">Meny</a></li>
@@ -38,7 +40,16 @@
     </ul>
   </nav>
 
-  <!-- Insta plus flag dropdown -->
+  <!-- ▼ NEW: hamburger + overlay -->
+  <button class="hamburger" id="hamburger"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+          aria-label="Öppna meny">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-overlay" id="nav-overlay" hidden></div>
+
+  <!-- Insta + language stays as-is -->
   <div class="header-right">
     <a href="https://www.instagram.com/augustbistrokungalv/"
       target="_blank" rel="noopener"
@@ -139,7 +150,7 @@
       </div>
     </div>
     
-    <a href="#booking" class="btn">Boka en upplevelse</a>
+    <a href="#booking" class="btn CTA_btn">Boka en upplevelse</a>
   </div>
 
   <!-- Link to menu parser script -->
