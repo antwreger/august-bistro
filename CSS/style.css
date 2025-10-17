@@ -119,8 +119,9 @@ header.is-fading::after {
 .lang-select {
   font: inherit;
   border: none;
-  background: transparent;
-  padding: 1rem 1rem;
+  background: black;
+  color: white;
+  padding: 0.35rem;
   font-size: 1.25rem;
   cursor: pointer;
 }
