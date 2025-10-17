@@ -27,17 +27,42 @@
 <body>
      <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#top">Start</a></li>
-                <li><a href="#meny">Meny</a></li>
-                <li><a href="#about">Om Oss</a></li>
-                <li><a href="#spritprovning">Spritprovning</a></li>
-                <li><a href="#booking">Boka en upplevelse</a></li>
-                <li><a href="#findus">Hitta Oss</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav>
+    <ul>
+      <li><a href="#top">Start</a></li>
+      <li><a href="#meny">Meny</a></li>
+      <li><a href="#about">Om Oss</a></li>
+      <li><a href="#spritprovning">Spritprovning</a></li>
+      <li><a href="#booking">Boka en upplevelse</a></li>
+      <li><a href="#findus">Hitta Oss</a></li>
+    </ul>
+  </nav>
+
+  <!-- Insta plus flag dropdown -->
+  <div class="header-right">
+    <a href="https://www.instagram.com/augustbistrokungalv/"
+      target="_blank" rel="noopener"
+      aria-label="Besök oss på Instagram" class="insta-link">
+      <svg xmlns="http://www.w3.org/2000/svg"
+         width="22" height="22" viewBox="0 0 24 24"
+        fill="none" stroke="white" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true" focusable="false">
+        <!-- rounded square -->
+        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+        <!-- lens -->
+        <circle cx="12" cy="12" r="3.4"></circle>
+        <!-- flash dot -->
+        <circle cx="17.5" cy="6.5" r="0.6"></circle>
+      </svg>
+    </a>
+
+    <select id="lang-select" class="lang-select" aria-label="Välj språk">
+      <option value="sv" selected>🇸🇪</option>
+      <option value="en">🇬🇧</option>
+    </select>
+  </div>
+</header>
 
     <!-- ===== HERO SECTION ===== -->
   <section class="hero-section" id="top">
