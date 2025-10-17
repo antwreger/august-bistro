@@ -28,6 +28,14 @@ h2 {
     font-size: 2rem;
 }
 
+p {
+ color: #cccccc;
+}
+
+p.description {
+  color: black;
+}
+
 /* Fade text near header CSS rules */
 .fade-near-header-text { /* trigger only */ }
 
@@ -266,7 +274,6 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   padding: 4rem 0;
-  border: 1px solid red;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -574,7 +581,7 @@ footer p {
 }
 
 /* "X" animation */
-.hamburger.is-active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger.is-active span:nth-child(1) { transform: translateY(8px) rotate(43deg); }
 .hamburger.is-active span:nth-child(2) { opacity: 0; }
 .hamburger.is-active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
@@ -590,6 +597,9 @@ footer p {
 @media (max-width: 900px) {
   header {
     justify-content: center;
+    background-color: black;
+    height: 32px;
+
   }
 
   /* Show burger, keep right tools */
@@ -616,7 +626,7 @@ footer p {
     background: black;
     transform: translateY(-100%);
     transition: transform 260ms ease;
-    padding-top: 2rem; /* space for header */
+    padding-top: 4rem; /* space for header */
     z-index: 999;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
@@ -655,11 +665,24 @@ footer p {
   .findus-section { padding: 60px 16px; }
   .contact-info { gap: 28px; }
 
+  header.is-fading::after {
+    top: 40px;
+  }
+
   /* Menu image responsiveness (if used elsewhere) */
 }
 
 /* Slightly smaller phones */
 @media (max-width: 560px) {
+
+  .about-content {
+    padding: 2rem;
+  }
+  
+  .sprit-content {
+    padding: 2rem;
+  }
+  
   h2 { font-size: 1.6rem; }
   .booking-content h3 { font-size: 1.6rem; }
   .hero-content { 
