@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroBgCarousel({
     container: '#hero-bg',
     images: [
-      'images/carousel/2.png',
+      'images/carousel/2.jpg',
       'images/carousel/3.jpg',
       'images/carousel/5.jpg',
       'images/carousel/6.jpg',
