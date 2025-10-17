@@ -262,11 +262,19 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+.btn-row {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  border: 1px solid red;
+}
+
 /* ===== ABOUT SECTION ===== */
 .about-section, .sprit-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .about-content {
@@ -575,7 +583,7 @@ footer p {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.45);
-  z-index: 998;
+  z-index: 10;
 }
 
 /* ====== RESPONSIVE LAYOUT ====== */
@@ -585,11 +593,17 @@ footer p {
   }
 
   /* Show burger, keep right tools */
-  .hamburger { display: inline-flex; }
+  .hamburger { 
+    display: inline-flex;
+    flex-direction: column;
+    border: none;
+  
+  }
   .header-right {
     position: absolute;
     right: 0.75rem;
     gap: 0.5rem;
+    align-items: center;
   }
   .lang-select { padding: 0.75rem; font-size: 1rem; }
   .insta-link img { width: 20px; height: 20px; }
@@ -602,7 +616,7 @@ footer p {
     background: black;
     transform: translateY(-100%);
     transition: transform 260ms ease;
-    padding-top: 72px; /* space for header */
+    padding-top: 2rem; /* space for header */
     z-index: 999;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
@@ -655,6 +669,10 @@ footer p {
   .hero-logo { width: 100px; }
   .menu-content {
     padding: 2rem;
+  }
+
+  header.is-fading::after {
+   display: none;
   }
   
 }
