@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="August Bistro - Upplev svensk gastronomi med modern twist. Boka bord för en minnesvärd middag.">
     <title>August Bistro - Svensk Gastronomi</title>
+    <link rel="preload"
+      href="/fonts/P22MorrisGolden-Regular.woff2"
+      as="font" type="font/woff2" crossorigin>
+      
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,14 +53,13 @@
   </button>
   <div class="nav-overlay" id="nav-overlay" hidden></div>
 
-  <!-- Insta + language stays as-is -->
   <div class="header-right">
     <a href="https://www.instagram.com/augustbistrokungalv/"
       target="_blank" rel="noopener"
       aria-label="Besök oss på Instagram" class="insta-link">
       <svg xmlns="http://www.w3.org/2000/svg"
          width="22" height="22" viewBox="0 0 24 24"
-        fill="none" stroke="white" stroke-width="1.8"
+        fill="none" stroke="var(--primary-color)" stroke-width="2.25"
         stroke-linecap="round" stroke-linejoin="round"
         aria-hidden="true" focusable="false">
         <!-- rounded square -->
@@ -77,14 +80,22 @@
 
     <!-- ===== HERO SECTION ===== -->
   <section class="hero-section" id="top">
-    <div class="hero-bg" id="hero-bg">
-    </div>
-    <div class="hero-content fade-on-scroll">
-      <img src="images/august-logo.png" alt="August Bistro - Välkommen till August Bistro" class="hero-logo">
-      <p class="description">En plats där smak möter tradition</p>
-      <a href="#meny" class="btn">Se vår meny</a>
-    </div>  
-  </section>
+  <div class="hero-bg" id="hero-bg"></div>
+
+  <div class="hero-content fade-on-scroll">
+    <h1 class="hero-logo">
+      <img src="images/logo-vit.png"
+           alt="August Bistro Logotyp"
+           aria-hidden="true">
+    </h1>
+
+    <p class="description">
+      Exklusiv whisky- och romprovning ett stenkast från centrala Göteborg.
+    </p>
+
+    <a href="#meny" class="btn CTA_btn">Meny</a>
+  </div>
+</section>
 
 <!-- ===== MENU SECTION ===== -->
 <section class="menu-section fade-near-header-text" id="meny">
@@ -210,8 +221,8 @@
         <label for="booking-type">Vad vill du boka?</label>
         <select id="booking-type" name="booking_type" required>
           <option value="middag" selected>Middag (Boka bord)</option>
-          <option value="sprit-whiskey">Spritprovning – Whiskey</option>
-          <option value="sprit-rom">Spritprovning – Rom</option>
+          <option value="sprit-whiskey">Dryckesprovning – Whiskey</option>
+          <option value="sprit-rom">Dryckesprovning – Rom</option>
         </select>
       </div>
 

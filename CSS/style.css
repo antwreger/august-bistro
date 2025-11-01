@@ -3,6 +3,20 @@
    =============================================== */
 
 /* ===== GLOBAL STYLES ===== */
+
+ :root {
+    --primary-color: #333333;
+    --secondary-color: #555555;
+    --CTA_Color: #ca9f72;
+    --CTA_Hover_Color: #000000;
+    --CTA_Border-Radius: 30px;
+    --CTA_Border: 1px solid #ca9f72;
+    --CTA_Border_Hover: 2px solid #ca9f72;
+    --CTA_Padding: 14px 28px;
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --font-family: 'Playfair Display', serif;
+ }
 * {
     font-family: 'Playfair Display', serif;
     margin: 0;
@@ -32,8 +46,8 @@ p {
  color: #cccccc;
 }
 
-p.description {
-  color: black;
+description {
+  color: white;
 }
 
 /* Fade text near header CSS rules */
@@ -160,7 +174,7 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
   pointer-events: none;
 }
@@ -212,23 +226,16 @@ nav a:hover {
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 10px;
+    background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 400px;
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #666;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); /* Safari/iOS support */
-    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.35);
 }
 
 .hero-logo {
@@ -238,37 +245,28 @@ nav a:hover {
     display: block;
 }
 
-.CTA_button 
+.btn
 {
     padding: 12px 24px;
     text-decoration: none;
-    color: white;
-    background-color: #5c5c5c;
-    border-radius: 5px;
+    color: var(--CTA_Color);
+    background-color: black;
+    border-radius: var(--CTA_Border-Radius);
     margin-top: 20px;
+    border: 1px solid var(--CTA_Color);
+    padding: var(--CTA_Padding);
     display: inline-block;
     transition: all 0.3s ease;
 }
 
 .CTA_button:hover {
-    background-color: #555;
+    background-color: var(--CTA_Hover_Color);
     transform: translateY(-2px);
-}
-
-.btn {
-    padding: 12px 24px;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #555;
-    transform: translateY(-2px);
+  font-weight: 700;
+  transition: 0.15s;
 }
 
 .btn-row {
@@ -690,7 +688,6 @@ footer p {
     width: 280px;
   
   }
-  .hero-logo { width: 100px; }
   .menu-content {
     padding: 2rem;
   }
