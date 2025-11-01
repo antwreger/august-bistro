@@ -46,8 +46,9 @@ p {
  color: #cccccc;
 }
 
-description {
+.description {
   color: white;
+  margin-bottom: 2rem;
 }
 
 /* Fade text near header CSS rules */
@@ -117,7 +118,7 @@ header.is-fading::after {
   gap: 0.75rem;
 }
 
-/* Instagram icon */
+/* lang-selectgram icon */
 .insta-link img {
   display: block;
   width: 22px;
@@ -615,7 +616,7 @@ footer p {
     align-items: center;
   }
   .lang-select { padding: 0.75rem; font-size: 1rem; }
-  .insta-link img { width: 20px; height: 20px; }
+  .insta-link img { width: 20px; height: 20px;}
 
   /* Turn nav into a slide-down panel */
   nav#primary-nav {
