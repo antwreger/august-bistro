@@ -49,6 +49,7 @@ p {
 .description {
   color: white;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 /* Fade text near header CSS rules */
@@ -135,10 +136,16 @@ header.is-fading::after {
   font: inherit;
   border: none;
   background: black;
-  color: white;
+  color: var(--CTA_Color);
   padding: 0.35rem;
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+.lang-select:active,
+.lang-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(202, 159, 114, 0.7);
 }
 
 nav ul {
@@ -158,6 +165,11 @@ nav a {
 
 nav a:hover {
     opacity: 0.7;
+}
+
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 /* ===== HERO SECTION ===== */
@@ -369,15 +381,16 @@ nav a:hover {
     text-align: center;
 }
 
-.booking-content h3 {
-    margin-bottom: 10px;
+.booking-content h2 {
+  margin-top: 1rem;
+    margin-bottom: 0.9rem;
     font-size: 2rem;
-    color: white;
+    color: var(--CTA_Color);
 }
 
 .booking-content p {
-    margin-bottom: 30px;
-    color: #ccc;
+    margin-bottom: 4rem;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -401,7 +414,7 @@ nav a:hover {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: white;
+    color: #fff;
     font-weight: 500;
 }
 
@@ -409,10 +422,12 @@ nav a:hover {
 .form-group select {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: transparent;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
     border-radius: 8px;
+    background-color: var(--background-color);
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--CTA_Color);
     font-size: 16px;
     transition: all 0.3s ease;
     box-sizing: border-box;
@@ -437,9 +452,9 @@ nav a:hover {
 
 .booking-btn {
     padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: var(--background-color);
+    color: var(--CTA_Color);
+    border: var(--CTA_Border);
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
@@ -478,14 +493,9 @@ nav a:hover {
 /* and one for the date as well */
 /* Add space so text doesn't overlap the icon */
 .form-group input[type="date"] {
-  padding-right: 44px;
 }
 
 /* Replace the calendar icon (Chrome / Safari / Edge) */
-.form-group input[type="date"] {
-  padding-right: 44px;
-}
-
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1zm-2 8v10h14V10H5zm14-2V6H5v2h14z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -515,6 +525,7 @@ nav a:hover {
 
 .findus-content h2 {
     margin-bottom: 4rem;
+    color: var(--CTA_Color);
 }
 
 .contact-info {
@@ -533,7 +544,7 @@ nav a:hover {
 .contact-info h3 {
     margin-bottom: 15px;
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--CTA_Color);
 }
 
 .contact-info p {
@@ -563,7 +574,7 @@ footer p {
   height: 38px;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 10px;
-  background: rgba(255,255,255,0.06);
+  background: var(--background-color);
   display: none; /* hidden on desktop, shown via media query */
   align-items: center;
   justify-content: center;
@@ -576,7 +587,7 @@ footer p {
   display: block;
   width: 20px;
   height: 2px;
-  background: white;
+  background: var(--CTA_Color);
   transition: transform 220ms ease, opacity 160ms ease;
 }
 
@@ -594,11 +605,11 @@ footer p {
 }
 
 /* ====== RESPONSIVE LAYOUT ====== */
-@media (max-width: 900px) {
+@media (max-width: 1032px) {
   header {
     justify-content: center;
     background-color: black;
-    height: 32px;
+    height: 24px;
 
   }
 
@@ -625,12 +636,17 @@ footer p {
     left: 0; right: 0;
     background: black;
     transform: translateY(-100%);
-    transition: transform 260ms ease;
+    opacity: 0;
     padding-top: 4rem; /* space for header */
     z-index: 999;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: transform 150ms ease, opacity 150ms ease-out;
   }
-  nav#primary-nav.open { transform: translateY(0); }
+  nav#primary-nav.open { 
+    transform: translateY(0); 
+    opacity: 1;
+  
+  }
   body.nav-open { overflow: hidden; } /* prevent background scroll */
 
   nav#primary-nav ul {
@@ -654,6 +670,7 @@ footer p {
 
   /* Sections spacing under fixed header */
   .about-content { padding-top: 4rem; }
+  .about-content h2 { color: var(--CTA_Color); }
   .booking-img { height: 320px; object-position: center 70%; }
   .booking-hero { height: auto; }
 
@@ -682,6 +699,10 @@ footer p {
   .sprit-content {
     padding: 2rem;
   }
+
+  .sprit-content h2 {
+    color: var(--CTA_Color);
+  }
   
   h2 { font-size: 1.6rem; }
   .booking-content h3 { font-size: 1.6rem; }
@@ -691,6 +712,14 @@ footer p {
   }
   .menu-content {
     padding: 2rem;
+  }
+
+  #menu-title {
+    color: #fff;
+  }
+
+  .dyn-section h3 {
+    color: var(--CTA_Color);
   }
 
   header.is-fading::after {
