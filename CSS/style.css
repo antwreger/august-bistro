@@ -113,22 +113,20 @@ header.is-fading::after {
 /* Right-side utility box */
 .header-right {
   position: absolute;
-  right: 1.5rem;
+  right: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* lang-selectgram icon */
-.insta-link img {
-  display: block;
-  width: 22px;
-  height: 22px;
-  transition: opacity 0.2s ease;
-}
 
-.insta-link:hover img {
-  opacity: 0.8;
+.insta-link {
+  transform: translateY(3px);
+  display: block;
+  width: 26px;
+  height: 26px;
 }
 
 /* Language dropdown */
@@ -137,8 +135,8 @@ header.is-fading::after {
   border: none;
   background: black;
   color: var(--CTA_Color);
-  padding: 0.35rem;
-  font-size: 1.25rem;
+  padding:0.25rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -168,8 +166,8 @@ nav a:hover {
 }
 
 section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
 }
 
 /* ===== HERO SECTION ===== */
@@ -282,10 +280,12 @@ section {
   transition: 0.15s;
 }
 
-.btn-row {
+.btn_row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 4rem 0;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -296,11 +296,14 @@ section {
     flex-direction: column;
 }
 
+.sprit-content h2 {
+
+  color: var(--CTA_Color);
+}
+
 .about-content {
     max-width: 800px;
     text-align: center;
-    padding-top: 4.5rem;
-    padding-bottom: 2rem;
 }
 
 .about-content h2 {
@@ -364,7 +367,6 @@ section {
 /* yes we need to scale the images properly in real production lol */
 
 .booking-section {
-  margin-top: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,7 +625,7 @@ footer p {
   .header-right {
     position: absolute;
     right: 0.75rem;
-    gap: 0.5rem;
+    gap: 0rem;
     align-items: center;
   }
   .lang-select { padding: 0.75rem; font-size: 1rem; }
@@ -669,7 +671,6 @@ footer p {
   }
 
   /* Sections spacing under fixed header */
-  .about-content { padding-top: 4rem; }
   .about-content h2 { color: var(--CTA_Color); }
   .booking-img { height: 320px; object-position: center 70%; }
   .booking-hero { height: auto; }
@@ -689,6 +690,16 @@ footer p {
   /* Menu image responsiveness (if used elsewhere) */
 }
 
+.btn_row {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem;
+  gap: 0.05rem;
+  justify-content: center;
+}
+
+section { margin: 1rem 0rem;}
+
 /* Slightly smaller phones */
 @media (max-width: 560px) {
 
@@ -699,7 +710,7 @@ footer p {
   .sprit-content {
     padding: 2rem;
   }
-
+.btn
   .sprit-content h2 {
     color: var(--CTA_Color);
   }
@@ -711,7 +722,6 @@ footer p {
   
   }
   .menu-content {
-    padding: 2rem;
   }
 
   #menu-title {
