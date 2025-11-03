@@ -304,6 +304,7 @@ section {
 .about-content {
     max-width: 800px;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .about-content h2 {
