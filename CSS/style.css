@@ -56,6 +56,10 @@ p {
   width: 100%;
 }
 
+.CTA_li nav a{
+  color: var(--CTA_Color);
+}
+
 /* Fade text near header CSS rules */
 .fade-near-header-text { /* trigger only */ }
 
@@ -92,7 +96,7 @@ header {
   align-items: center;
   padding: 1rem 0;
   letter-spacing: 0.8px;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 6px black;
 
 }
 
