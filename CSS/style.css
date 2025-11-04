@@ -26,6 +26,10 @@ html {
     scroll-behavior: smooth;
 }
 
+  .dyn-section h3 {
+    color: var(--CTA_Color);
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -310,6 +314,7 @@ section {
 .about-content h2 {
   margin-bottom: 3rem;
     font-size: 2rem;
+    color: var(--CTA_Color);
 }
 
 .about-content p:last-of-type {
@@ -691,14 +696,6 @@ footer p {
   /* Menu image responsiveness (if used elsewhere) */
 }
 
-.btn_row {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0rem;
-  gap: 0.05rem;
-  justify-content: center;
-}
-
 section { margin: 1rem 0rem;}
 
 /* Slightly smaller phones */
@@ -729,9 +726,6 @@ section { margin: 1rem 0rem;}
     color: #fff;
   }
 
-  .dyn-section h3 {
-    color: var(--CTA_Color);
-  }
 
   header.is-fading::after {
    display: none;
